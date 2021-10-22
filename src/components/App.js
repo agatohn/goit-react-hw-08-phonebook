@@ -6,6 +6,8 @@ import PublicRoute from "../pages/PublicRoute";
 import PrivateRoute from "../pages/PrivateRoute";
 import { Switch } from "react-router";
 import Header from "./header/Header";
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 const HomePage = lazy(
   () => import("../pages/homePage/HomePage") /*webpackChunkName: 'HomePage' */
@@ -34,7 +36,20 @@ export default function App() {
       <>
         <Header />
         <Switch>
-          <Suspense fallback={<span>... smth loading</span>}>
+          <Suspense
+            fallback={
+              <div>
+                <Loader
+                  className="Loader"
+                  type="ThreeDots"
+                  color="#00BFFF"
+                  height={20}
+                  width={100}
+                  timeout={3000}
+                />
+              </div>
+            }
+          >
             <PublicRoute exact path="/">
               <HomePage />
             </PublicRoute>
