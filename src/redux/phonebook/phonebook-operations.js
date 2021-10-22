@@ -13,7 +13,6 @@ const addContact =
           contact.name.toLocaleLowerCase() === name.toLocaleLowerCase() ||
           contacts.some((contact) => contact.number === number)
       )
-      // .some((contact) => contact.name === name)
     ) {
       return dispatch(
         contactsActions.addContactError(
