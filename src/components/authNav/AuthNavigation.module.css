@@ -1,0 +1,20 @@
+.nav {
+  margin-right: 40px;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: blueviolet;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav:hover {
+  color: green;
+}
+
+.activeNav {
+  margin-right: 40px;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: rgb(16, 7, 24);
+  pointer-events: none;
+}
