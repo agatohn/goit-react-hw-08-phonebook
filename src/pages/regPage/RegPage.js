@@ -33,7 +33,7 @@ export default function RegPage() {
 
   return (
     <div>
-      <h1>Registration form</h1>
+      <h2>Registration form</h2>
       <form onSubmit={handleSubmit} autoComplete="off">
         <label>
           Name

@@ -21,7 +21,7 @@ export default function LoginPage() {
     setEmail("");
     setPassword("");
   };
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(authOperations.logIn({ email, password }));
     resetForm();
@@ -29,17 +29,27 @@ export default function LoginPage() {
 
   return (
     <div>
-      <h1>Login form</h1>
+      <h2>Login form</h2>
 
       <form onSubmit={handleSubmit} autoComplete="off">
         <label>
           Email
-          <input type="email" name="email" value={email} onChange={handleChange} />
+          <input
+            type="email"
+            name="email"
+            value={email}
+            onChange={handleChange}
+          />
         </label>
 
         <label>
           Password
-          <input type="password" name="password" value={password} onChange={handleChange} />
+          <input
+            type="password"
+            name="password"
+            value={password}
+            onChange={handleChange}
+          />
         </label>
 
         <button type="submit">Log in</button>

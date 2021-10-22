@@ -1,8 +1,6 @@
 import axios from "axios";
 import contactsActions from "./phonebook-actions";
 
-// axios.defaults.baseURL = "http://connections-api.herokuapp.com";
-
 const addContact =
   ({ name, number }) =>
   (dispatch, getState) => {
@@ -38,10 +36,6 @@ const getContact = () => (dispatch) => {
     .then(({ data }) => dispatch(contactsActions.getContactsSuccess(data)))
     .catch((error) => dispatch(contactsActions.getContactsError(error)));
 };
-
-// const clearContactList = () => dispatch=> {
-
-// }
 
 const contactsOperations = { getContact, addContact, deleteContact };
 export default contactsOperations;
