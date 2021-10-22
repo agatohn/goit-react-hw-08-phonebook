@@ -7,9 +7,18 @@ const addContact =
     const contact = { name, number };
     const contacts = getState().contacts.contacts;
 
-    if (contacts?.some((contact) => contact.name === name)) {
+    if (
+      contacts?.some(
+        (contact) =>
+          contact.name.toLocaleLowerCase() === name.toLocaleLowerCase() ||
+          contacts.some((contact) => contact.number === number)
+      )
+      // .some((contact) => contact.name === name)
+    ) {
       return dispatch(
-        contactsActions.addContactError(`${name} is alredy exist`)
+        contactsActions.addContactError(
+          `Name: ${name} or number: ${number} is alredy exist`
+        )
       );
     }
     dispatch(contactsActions.addContactRequest());
