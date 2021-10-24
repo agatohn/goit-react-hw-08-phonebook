@@ -2,8 +2,8 @@
 import { lazy, Suspense, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { authSelectors, authOperations } from "../redux/authorization";
-import PublicRoute from "../pages/PublicRoute";
-import PrivateRoute from "../pages/PrivateRoute";
+import PublicRoute from "../routes/PublicRoute";
+import PrivateRoute from "../routes/PrivateRoute";
 import { Switch } from "react-router";
 import Header from "./header/Header";
 import Loader from "react-loader-spinner";

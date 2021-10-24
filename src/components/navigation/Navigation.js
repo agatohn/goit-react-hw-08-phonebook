@@ -13,7 +13,7 @@ const Navigation = () => {
         to="/"
         exact
       >
-        home
+        Home
       </NavLink>
       {isLoggedIn && (
         <NavLink
@@ -22,7 +22,7 @@ const Navigation = () => {
           to="/phonebook"
           exact
         >
-          phonebook
+          Phonebook
         </NavLink>
       )}
     </nav>

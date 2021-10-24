@@ -10,7 +10,7 @@ const Menu = () => {
   };
   return (
     <div className={style.userWrapper}>
-      <span className={style.userName}>Loged in as: {userName}</span>
+      <span className={style.userName}>Log in as: {userName}</span>
       <button className={style.logBtn} type="button" onClick={logout}>
         logout
       </button>

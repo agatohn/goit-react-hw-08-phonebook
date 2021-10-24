@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
 import { createReducer } from "@reduxjs/toolkit";
 import contactsActions from "./phonebook-actions";
+import { authOperations } from "../authorization";
 
 const contacts = createReducer([], {
   [contactsActions.getContactsSuccess]: (_, { payload }) => payload,
@@ -11,6 +12,7 @@ const contacts = createReducer([], {
   [contactsActions.addContactError]: (_, { payload }) => alert(payload),
   [contactsActions.deleteContactSuccess]: (state, { payload }) =>
     state.filter(({ id }) => id !== payload),
+  [authOperations.logOut.fulfilled]: () => [],
 });
 
 const filter = createReducer("", {
@@ -33,6 +35,9 @@ const error = createReducer(null, {
   [contactsActions.getContactsError]: (_, { payload }) => payload,
   [contactsActions.addContactError]: (_, { payload }) => payload,
   [contactsActions.deleteContactError]: (_, { payload }) => payload,
+  [contactsActions.getContactsSuccess]: () => null,
+  [contactsActions.addContactSuccess]: () => null,
+  [contactsActions.deleteContactSuccess]: () => null,
 });
 
 export default combineReducers({

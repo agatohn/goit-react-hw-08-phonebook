@@ -10,7 +10,7 @@ const AuthNavigation = () => {
         to="/register"
         exact
       >
-        register
+        Sign Up
       </NavLink>
       <NavLink
         className={style.nav}
@@ -18,7 +18,7 @@ const AuthNavigation = () => {
         to="/login"
         exact
       >
-        login
+        Login
       </NavLink>
     </>
   );
