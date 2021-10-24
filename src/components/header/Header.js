@@ -36,7 +36,7 @@ export default function Header() {
             borderBottom: (theme) => `1px solid ${theme.palette.divider}`,
           }}
         >
-          <Toolbar sx={{ flexWrap: "wrap" }}>
+          <Toolbar sx={{ flexWrap: "wrap", justifyContent: "space-between" }}>
             <Navigation /> {isLoggedIn ? <Menu /> : <AuthNavigation />}
           </Toolbar>
         </AppBar>

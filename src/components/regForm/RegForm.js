@@ -63,43 +63,41 @@ export default function Regform() {
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
-        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <TextField
-                onChange={handleChange}
-                name="name"
-                required
-                fullWidth
-                id="name"
-                label="Name"
-                autoFocus
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                onChange={handleChange}
-                required
-                fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                onChange={handleChange}
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="new-password"
-              />
-            </Grid>
-          </Grid>
+        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+          <TextField
+            onChange={handleChange}
+            margin="normal"
+            name="name"
+            required
+            fullWidth
+            id="name"
+            label="Name"
+            autoFocus
+          />
+
+          <TextField
+            onChange={handleChange}
+            margin="normal"
+            required
+            fullWidth
+            id="email"
+            label="Email Address"
+            name="email"
+            autoComplete="email"
+          />
+
+          <TextField
+            onChange={handleChange}
+            margin="normal"
+            required
+            fullWidth
+            name="password"
+            label="Password"
+            type="password"
+            id="password"
+            autoComplete="new-password"
+          />
+
           <Button
             type="submit"
             fullWidth
