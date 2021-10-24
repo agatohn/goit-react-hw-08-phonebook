@@ -1,3 +1,8 @@
+body {
+  background-image: url("../../img/bg.jpg");
+  background-size: cover;
+}
+
 .nav {
   margin-right: 40px;
   font-family: sans-serif;

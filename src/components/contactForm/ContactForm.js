@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { contactsOperations } from "../../redux/phonebook";
+import Button from "@material-ui/core/Button";
 import style from "./ContactForm.module.css";
+import { Save } from "@material-ui/icons";
 
 export default function PhonebookForm() {
   const [name, setName] = useState("");
@@ -68,9 +70,15 @@ export default function PhonebookForm() {
             />
           </label>
         </div>
-        <button className={style.formBtn} type="submit">
+        <Button
+          startIcon={<Save />}
+          color="primary"
+          variant="contained"
+          type="submit"
+        >
           Add contact to phonebook
-        </button>
+        </Button>
+        {/* className={style.formBtn} */}
       </form>
     </div>
   );

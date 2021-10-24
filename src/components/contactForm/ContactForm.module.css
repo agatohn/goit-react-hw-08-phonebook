@@ -1,17 +1,19 @@
-body {
-  background-color: rgb(175, 223, 173);
-}
+/* body {
+  background-image: url("../../img/bg.jpg");
+  background-size: cover;
+} */
 
-form,
+/* form,
 label,
 input {
   display: block;
-}
+} */
 .formWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px;
+  /* background-image: url("https://www.comreg.ie/media/2019/04/Printed-Directories.jpg"); */
 }
 
 .form {

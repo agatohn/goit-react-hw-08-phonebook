@@ -1,7 +1,9 @@
+import { Button } from "@material-ui/core";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { contactsOperations, contactsSelectors } from "../../redux/phonebook";
 import style from "./ContactList.module.css";
+import DeleteIcon from "@material-ui/icons/Delete";
 
 export default function PhonebookList() {
   const dispatch = useDispatch();
@@ -26,13 +28,16 @@ export default function PhonebookList() {
               {contact.name}:{" "}
               <a href="tel:+{contact.number}">{contact.number}</a>
             </span>
-            <button
-              className={style.contactsBtn}
+            <Button
+              color="secondary"
+              variant="contained"
+              size="small"
+              startIcon={<DeleteIcon />}
               type="button"
               onClick={() => deleteBtnHandler(contact.id)}
             >
               delete
-            </button>
+            </Button>
           </li>
         ))}
       </ul>

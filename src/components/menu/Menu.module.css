@@ -1,5 +1,6 @@
 .userWrapper {
   display: flex;
+  align-items: baseline;
 }
 .userName {
   display: block;

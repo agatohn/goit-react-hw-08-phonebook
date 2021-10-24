@@ -18,7 +18,7 @@ const AuthNavigation = () => {
         to="/login"
         exact
       >
-        Login
+        Sign In
       </NavLink>
     </>
   );
