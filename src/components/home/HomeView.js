@@ -5,7 +5,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 // import { createTheme, ThemeProvider } from "@mui/material/styles";
-import img from "../../img/Phonebook.jpg";
+import img from "../../img/Phonebook.png";
 
 export default function HomePage() {
   const userName = useSelector(authSelectors.getUserName);
@@ -14,7 +14,7 @@ export default function HomePage() {
   return isLoggedIn ? (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
-      <img src={img} alt={"phonebook"} width="370" />
+      <img src={img} alt={"phonebook"} width="400" />
       <Typography
         align="center"
         component="h2"
